@@ -141,7 +141,7 @@ function checkAvailability() {
 
   fetch('{{ route("client.check.availability", [$resort->id, $room->id]) }}?check_in=' + ci + '&check_out=' + co)
     .then(r => r.json())
-    .then(data => {
+    .then(data =>{
       if (data.available) {
         msg.style.background = '#f0fdf4';
         msg.style.color = '#166534';
